@@ -1,0 +1,26 @@
+extends ../layout
+
+block append head
+  script(type='text/javascript', src='/public/scripts/found.js')
+  script(type='text/javascript', src='/public/scripts/notfound.js')
+  script(type='text/javascript', src='//code.jquery.com/jquery-2.1.4.min.js')
+
+block content
+  p ok1
+  form.sample-form.form-extra-class(method='post', action='/assert/1/post')
+    input(type='text', name='input1', value='defaultValue1')
+    input(type='text', name='input2', value='defaultValue2')
+    input(type='hidden', name='input3', value='defaultValue3')
+
+    input(type='submit' value='Submit')
+    input(type='reset', value='Reset')
+
+  .links
+    p
+      a(href='http://example.com') LinkLabel
+
+  .styles
+    div(style='display: inline;') Hello, world!
+
+  .texts
+    p Text 1.
